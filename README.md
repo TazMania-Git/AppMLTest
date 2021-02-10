@@ -5,6 +5,8 @@ En la aplicación se agregaron funciones como el refresh token el cual se encarg
 ## Funcionamiento 🚀
 La aplicación es muy intuitiva ya que utiliza las funcionalidades nativas de Android y IOS (por el momento se utilizó un emulador Android) 
 
+![](https://github.com/TazMania-Git/AppMLTest/blob/main/src/assets/AppMLTest.gif)
+
 ## Download Log
 
 ![Alt text](https://github.com/TazMania-Git/AppMLTest/blob/main/src/assets/Captura1.PNG?raw=true)![Alt text](https://github.com/TazMania-Git/AppMLTest/blob/main/src/assets/Captura2.PNG?raw=true)
