@@ -1,17 +1,52 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar class="background">
+        <ion-item class="background">
+            <ion-title class="background">
+                <ion-icon name="pricetags-outline"></ion-icon>
+                Seller_Id : {{sellerId}}
+                <div>
+                    <small>{{nickName}}</small>
+                </div>
+            </ion-title>
+        </ion-item>
+        <ion-buttons slot="end">
+            <ion-button (click)="presentPopover($event)">
+                <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+
+    </ion-toolbar>
+    <ion-searchbar placeholder="Buscar Seller" inputmode="text" (ionChange)="onSearchChange($event)" animated>
+    </ion-searchbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-list>
+        <ion-card>
+            <ion-item *ngFor="let item of sellerItems">
+
+                <ion-card-header>
+                    <ion-item>
+                        <ion-label>
+                            <ion-card-title>ID: {{item.id}}</ion-card-title>
+                            <ion-card-subtitle>Category_Id : {{item.category_id}}</ion-card-subtitle>
+                        </ion-label>
+                        <ion-avatar slot="end">
+                            <img [src]="item.thumbnail" />
+                        </ion-avatar>
+                    </ion-item>
+
+                    <ion-card-content>
+                        {{item.title}}
+                    </ion-card-content>
+
+                </ion-card-header>
+            </ion-item>
+
+        </ion-card>
+    </ion-list>
+
+
 </ion-content>
