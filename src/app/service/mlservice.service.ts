@@ -35,14 +35,15 @@ buscarPorSellerId(query:string){
 
 }
 
+// MUY IMPORTANTE COMPLETAR ESTA INFORMACION PARA QUE FUNCIONE //
 refreshToken(){
 
   const url = `https://api.mercadolibre.com/oauth/token`;
   const body = {
      grant_type: 'refresh_token',
-     client_id:'8246960858213510',
-     client_secret:'qvbaS2WelbdFCnLffNwkCbh7lZEeAZys',
-     refresh_token:'TG-601c235dd376390007b92d28-28610621'
+     client_id:'', // SE NECESITA COMPLETAR ESTE CAMPO PARA QUE FUNCIONE
+     client_secret:'', // SE NECESITA COMPLETAR ESTE CAMPO PARA QUE FUNCIONE
+     refresh_token:'' // SE NECESITA COMPLETAR ESTE CAMPO PARA QUE FUNCIONE
  };
   const headers = new HttpHeaders({
     'accept':' application/json',
